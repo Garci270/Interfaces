@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -288,6 +289,12 @@
             </div>
         </div>
     </div>
+        <button class="btnReset"  id="restartGame"> Reiniciar Juego</button>
+    <button id="btnInstructions" class="btnShow">Instrucciones de juego:</button>
+    <div class="instructions" id="text1">
+        <h2> Insertar las fichas por la parte superior del tablero, el primer jugador en ubicar 4 en fila es el ganador!</h2>
+    </div>
+    <canvas id="canvasGame"></canvas>
     <footer>
         <div class="contenedorFooter">
             <div class="seccion-redes">
@@ -322,6 +329,10 @@
     </footer>
     <script src="https://use.fontawesome.com/dca8629fdb.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/Juego.js"></script>
+    <script src="js/Tablero.js"></script>
+    <script src="js/ficha.js"></script>
+    <script src="js/Menu.js"></script>
 </body>
 
 </html>

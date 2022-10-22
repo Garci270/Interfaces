@@ -1,0 +1,47 @@
+canvas{
+    margin-left: 25rem;
+}
+.header {
+    overflow: hidden;
+    background-color: #599e2b;
+    text-align: center;
+}
+.btnReset{
+    background-color: red;
+}
+.btnShow{
+    position:absolute;
+
+}
+.instructions{
+    width: 300px;
+    height: 30rem;
+    overflow-y: hidden;
+    display: none;
+    position:absolute;
+    top:10rem;
+    left:0;
+}
+.hideText{
+    animation: showText 0.5s ease-in 1;
+    animation-direction: reverse;
+}
+h2{
+    font: oblique bold 120% cursive;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.show {
+    display: block;
+    animation: showText 1s ease-in 1;
+
+}
+
+@keyframes showText {
+    0%{
+        transform: translateY(300px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
