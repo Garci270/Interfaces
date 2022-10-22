@@ -144,7 +144,7 @@
             </div>
             <div class="buttons-juego">
                 <button class="jugar">Jugar!</button>
-                <button class="comoJugar">¿Como Jugar?</button>
+                <button class="comoJugar"><a href="#demo-modal">¿Como Jugar?</a></button>
             </div>
             <div class="compartir">
                 <h4 id="compartir-juego"><i class="fa fa-share" aria-hidden="true"></i> Compartir</h4>
@@ -320,6 +320,31 @@
             </div>
         </div>
     </footer>
+    <div id="demo-modal" class="modal">
+		<div class="modal__content">
+			<h1>Instrucciones del Juego</h1>
+			<div>
+                <h4>Posición inicial y objetivo del juego</h4>
+                <ul>
+                    <li>El objetivo de este juego consiste en colocar cuatro fichas en una fila contínua vertical, horizontal o diagonalmente.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cómo colocar las fichas</h4>
+                <ul>
+                    <li>La regla para colocarlas consiste en que estas siempre "caen hasta abajo". Es decir una ficha puede ser colocada bien en la parte inferior de una columna o bien sobre otra de alguna otra columna.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cómo finalizar el juego</h4>
+                <ul>
+                    <li>Uno de los jugadores coloca cuatro o más fichas en una línea contínua vertical, horizontal o diagonalmente. Este jugador gana la partida.</li>
+                    <li>Todas las casillas del tablero están ocupadas y ningún jugador cumple la condición anterior para ganar. En este caso la partida finaliza en empate.</li>
+                </ul>
+            </div>
+			<a href="#" class="modal__close">&times;</a>
+		</div>
+	</div>
     <script src="https://use.fontawesome.com/dca8629fdb.js"></script>
     <script src="js/main.js"></script>
 </body>
