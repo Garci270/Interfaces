@@ -19,7 +19,7 @@ class Tablero {
     this.ctx.rect(0, 0, 655, 650);
     this.ctx.fillStyle = pat;
     this.ctx.fill();
-
+    this.ctx.lineWidth = 1
     //Celdas para fichas
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
