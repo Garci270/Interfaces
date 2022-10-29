@@ -1,7 +1,7 @@
 class Juego {
-    constructor(ctx, width, height){
+    constructor(ctx, width, height,size){
         this.ctx = ctx;
-        this.tablero = new Tablero(ctx,8);
+        this.tablero = new Tablero(ctx,size);
         this.mode = '';
         this.width = width;
         this.height = height;

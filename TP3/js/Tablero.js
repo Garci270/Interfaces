@@ -16,7 +16,7 @@ class Tablero {
   draw() {
     let image = document.querySelector('.img-tablero')
     let pat = this.ctx.createPattern(image, 'no-repeat');
-    this.ctx.rect(0, 0, 655, 650);
+    this.ctx.rect(0, 0, 700, 650);
     this.ctx.fillStyle = pat;
     this.ctx.fill();
     this.ctx.lineWidth = 1
@@ -24,8 +24,8 @@ class Tablero {
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
         this.ctx.beginPath();
-        let posX = espaci.posX + espaci.width + 10 ;
-        let posY = espaci.posY + espaci.height + 10 ;
+        let posX = espaci.posX + espaci.width - 50 ;
+        let posY = espaci.posY + espaci.height - 50 ;
         this.ctx.fillStyle = "#060A16";
         this.ctx.strokeStyle = "#fff";
         this.ctx.arc(posX, posY, 27, 0, 2 * Math.PI);
@@ -233,11 +233,37 @@ class Tablero {
 
       jugadorActivo = cells[i].state;
 
-      if (count == 4) {
-        if (this.turnoActivo) {
-          return 1;
-        } else {
-          return 2;
+      if(this.size == 8){
+        if (count == 4) {
+          if (this.turnoActivo) {
+            return 1;
+          } else {
+            return 2;
+          }
+        }
+      }else if(this.size == 9){
+        if (count == 5) {
+          if (this.turnoActivo) {
+            return 1;
+          } else {
+            return 2;
+          }
+        }
+      }else if(this.size == 10){
+        if (count == 6) {
+          if (this.turnoActivo) {
+            return 1;
+          } else {
+            return 2;
+          }
+        }
+      }else if(this.size == 11){
+        if (count == 7) {
+          if (this.turnoActivo) {
+            return 1;
+          } else {
+            return 2;
+          }
         }
       }
     }
