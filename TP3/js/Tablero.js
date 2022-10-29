@@ -20,15 +20,30 @@ class Tablero {
     this.ctx.fillStyle = pat;
     this.ctx.fill();
     this.ctx.lineWidth = 1
+    let posX;
+    let posY;
+    console.log(this.size)
     //Celdas para fichas
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
         this.ctx.beginPath();
-        let posX = espaci.posX + espaci.width - 50 ;
-        let posY = espaci.posY + espaci.height - 50 ;
+        if(this.size == 8){
+          posX = espaci.posX + espaci.width  + 60;
+          posY = espaci.posY + espaci.height + 60 ;
+        }else if(this.size == 9){
+          posX = espaci.posX + espaci.width  + 30;
+          posY = espaci.posY + espaci.height + 30 ;
+        }
+        else if(this.size == 10){
+          posX = espaci.posX + espaci.width;
+          posY = espaci.posY + espaci.height ;
+        }else if(this.size == 11){
+          posX = espaci.posX + espaci.width - 30;
+          posY = espaci.posY + espaci.height - 30 ;
+        }
         this.ctx.fillStyle = "#060A16";
         this.ctx.strokeStyle = "#fff";
-        this.ctx.arc(posX, posY, 27, 0, 2 * Math.PI);
+        this.ctx.arc(posX, posY, 20, 0, 2 * Math.PI);
         this.ctx.fill();
         this.ctx.stroke();
       });
@@ -161,8 +176,8 @@ class Tablero {
     for (let y = 0; y < this.size; y++) {
       for (let x = 0; x < this.size; x++) {
         let blankSpace = {
-          posX: 65 + x * 60,
-          posY: 50 + y * 60,
+          posX: 65 + x * 50,
+          posY: 50 + y * 50,
           width: 60,
           height: 60,
           state: 0,
