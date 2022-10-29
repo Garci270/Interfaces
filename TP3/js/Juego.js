@@ -57,13 +57,13 @@ class Juego {
         let size = 90;
         let text;
         if (player == 1) {
-            this.ctx.fillStyle = "blue";
-            this.ctx.strokeStyle = "blue";
-            text = "Azul!";
+            this.ctx.fillStyle = "white";
+            this.ctx.strokeStyle = "white";
+            text = "Snow!";
         } else {
-            this.ctx.fillStyle = "red";
-            this.ctx.strokeStyle = "red";  
-            text = "Rojo!";
+            this.ctx.fillStyle = "blue";
+            this.ctx.strokeStyle = "blue";  
+            text = "del Caminante";
         }
         this.ctx.font = size + "px Times New Roman";
         this.ctx.lineJoin = "round";

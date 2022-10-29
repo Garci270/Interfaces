@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/juego.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -59,6 +58,7 @@
 			</div>
 		</div>
 	</div>
+    <img src="./assets/img/tablero.jpg" alt="" class="img-tablero">
     <div class="bread spinner-on">
 		<h4>4 EN LINEA / <a href="index.html">HOME</a></h4>
 	</div>
@@ -141,10 +141,10 @@
                 <h2>4 En linea</h2>
             </div>
             <div class="img-cuatroEnLinea">
-                <img src="assets/img/4enlinea.png" alt="">
+            <canvas id="canvasGame"></canvas>
             </div>
             <div class="buttons-juego">
-                <button class="jugar">Jugar!</button>
+                <button class="jugar" id="restartGame">Reiniciar</button>
                 <button class="comoJugar"><a href="#demo-modal">¿Como Jugar?</a></button>
             </div>
             <div class="compartir">
@@ -289,12 +289,6 @@
             </div>
         </div>
     </div>
-        <button class="btnReset"  id="restartGame"> Reiniciar Juego</button>
-    <button id="btnInstructions" class="btnShow">Instrucciones de juego:</button>
-    <div class="instructions" id="text1">
-        <h2> Insertar las fichas por la parte superior del tablero, el primer jugador en ubicar 4 en fila es el ganador!</h2>
-    </div>
-    <canvas id="canvasGame"></canvas>
     <footer>
         <div class="contenedorFooter">
             <div class="seccion-redes">

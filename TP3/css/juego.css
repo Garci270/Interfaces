@@ -257,6 +257,17 @@ ul.slider img:first-child{
 ul.slider img:target{
     opacity: 1;
 }
+
+
+canvas{
+    margin-left: 7rem;
+}
+.border{
+    border-radius: 150px;
+}
+.img-tablero{
+    display: none;
+}
 @media only screen and (min-width:1024px){
     .modal {
         width: 100%;

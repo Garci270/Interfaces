@@ -13,19 +13,21 @@ class Tablero {
   }
 
   draw() {
-    //Fondo de color celeste
-    this.ctx.fillStyle = "#3B61AB";
-    this.ctx.fillRect(60, 40, 490, 500);
+    let image = document.querySelector('.img-tablero')
+    let pat = this.ctx.createPattern(image, 'no-repeat');
+    this.ctx.rect(0, 0, 655, 650);
+    this.ctx.fillStyle = pat;
+    this.ctx.fill();
 
     //Celdas para fichas
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
         this.ctx.beginPath();
-        let posX = espaci.posX + espaci.width / 2;
-        let posY = espaci.posY + espaci.height / 2;
-        this.ctx.fillStyle = "#6FBD95";
-        this.ctx.strokeStyle = "#6FBD95";
-        this.ctx.arc(posX, posY, 25, 0, 2 * Math.PI);
+        let posX = espaci.posX + espaci.width + 10 ;
+        let posY = espaci.posY + espaci.height + 10 ;
+        this.ctx.fillStyle = "#060A16";
+        this.ctx.strokeStyle = "#fff";
+        this.ctx.arc(posX, posY, 27, 0, 2 * Math.PI);
         this.ctx.fill();
         this.ctx.stroke();
       });
@@ -42,14 +44,14 @@ class Tablero {
   //Carga imagenes en fichas
   loadChip() {
     this.imageTeam1 = new Image();
-    this.imageTeam1.src = "./assets/fichaRoja.png";
+    this.imageTeam1.src = "./assets/ficha1.jpg";
     this.imageTeam1.onload = () => {
-      this.fichasTeam1.push(new Ficha(580, 100, 30, this.imageTeam1, this.ctx));
+      this.fichasTeam1.push(new Ficha(620, 40, 30, this.imageTeam1, this.ctx));
     };
     this.imageTeam2 = new Image();
-    this.imageTeam2.src = "./assets/fichaAzul.png";
+    this.imageTeam2.src = "./assets/ficha2.jpg";
     this.imageTeam2.onload = () => {
-      this.fichasTeam2.push(new Ficha(30, 100, 30, this.imageTeam2, this.ctx));
+      this.fichasTeam2.push(new Ficha(30, 40, 30, this.imageTeam2, this.ctx));
     };
   }
 
@@ -101,18 +103,18 @@ class Tablero {
     //calcula el centro de la celda 
     let posX =
       this.espacios[fila][columna].posX +
-      this.espacios[fila][columna].width / 2;
+      this.espacios[fila][columna].width + 10;
     let posY =
       this.espacios[fila][columna].posY +
-      this.espacios[fila][columna].height / 2;
+      this.espacios[fila][columna].height + 10;
     ficha.move(posX, posY);
     ficha.setDrop();
     if (this.turnoActivo == true) {
       this.espacios[fila][columna].state = 1;
-      this.fichasTeam1.push(new Ficha(580, 100, 30, this.imageTeam1, this.ctx));
+      this.fichasTeam1.push(new Ficha(620, 30, 30, this.imageTeam1, this.ctx));
     } else {
       this.espacios[fila][columna].state = 2;
-      this.fichasTeam2.push(new Ficha(30, 100, 30, this.imageTeam2, this.ctx));
+      this.fichasTeam2.push(new Ficha(30, 40, 30, this.imageTeam2, this.ctx));
     }
   }
   //Retorna la columna seleccionada

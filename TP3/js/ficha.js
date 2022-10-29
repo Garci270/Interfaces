@@ -9,7 +9,7 @@ class Ficha {
         this.setImage(color);
     }
     getPosX(){
-        return this.posX
+        return this.posX;
     }
     getPosY(){
         return this.posY;
@@ -24,7 +24,7 @@ class Ficha {
         }
     }
     hit(posX,posY){
-        let radio = Math.sqrt((posX - this.posX) ** 2 + (posY - this.posY) ** 2);
+        let radio = Math.sqrt((posX - this.posX) + 10 + (posY - this.posY) + 10);
         return radio < this.radius;
     }
     move(posX, posY){
