@@ -2,6 +2,35 @@
     width: 40px;
     height: 40px;
 }
+
+.fichas1 h4, .fichas2 h4{
+    color:#fff
+}
+
+.fichas{
+    display: flex;
+}
+
+.size-linea{
+    display: flex;
+}
+
+.size-linea .sizeGroup{
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 2px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.fichas2{
+    margin-left: auto;
+}
+
+.size-linea{
+    margin: auto;
+}
 .linkBtn{
     text-decoration: none;
     color: white;
