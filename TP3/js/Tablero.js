@@ -123,13 +123,16 @@ class Tablero {
     this.espacios[0].forEach((celda, index) => {
       if (
         posX >= celda.posX &&
-        posX <= celda.posX + celda.width &&
         posY <= celda.posY
-      ) {
-        retorned = index;
+        ) {
+          retorned = index;
+        }
+      });
+      console.log(this.espacios, retorned, posX, posY,);
+      if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
+        return retorned
       }
-    });
-    return retorned;
+      return retorned-1;
   }
   getRowAvailable(index) {
     let variable = this.espacios.length - 1;
