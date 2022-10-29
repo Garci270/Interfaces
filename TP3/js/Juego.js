@@ -7,6 +7,16 @@ class Juego {
         this.height = height;
         this.selectedChip = null;
         this.gameOver = false;
+        this.srcimgTeam1 = "";
+        this.srcimgTeam2 = "";
+    }
+
+    cambiarFicha1(image){
+        this.tablero.cambiarFicha1(image);
+    }
+
+    cambiarFicha2(image){
+        this.tablero.cambiarFicha2(image);
     }
 
     draw(){

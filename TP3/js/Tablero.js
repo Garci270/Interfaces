@@ -10,6 +10,7 @@ class Tablero {
     this.imageTeam1;
     this.imageTeam2;
     this.loadChip();
+
   }
 
   draw() {
@@ -44,15 +45,23 @@ class Tablero {
   //Carga imagenes en fichas
   loadChip() {
     this.imageTeam1 = new Image();
-    this.imageTeam1.src = "./assets/ficha1.jpg";
+    this.imageTeam1.src = "";
     this.imageTeam1.onload = () => {
       this.fichasTeam1.push(new Ficha(620, 40, 30, this.imageTeam1, this.ctx));
     };
     this.imageTeam2 = new Image();
-    this.imageTeam2.src = "./assets/ficha2.jpg";
+    this.imageTeam2.src = "";
     this.imageTeam2.onload = () => {
       this.fichasTeam2.push(new Ficha(30, 40, 30, this.imageTeam2, this.ctx));
     };
+  }
+
+  cambiarFicha1(imagen1){
+    this.imageTeam1.src = imagen1;
+  }
+
+  cambiarFicha2(imagen1){
+    this.imageTeam2.src = imagen1;
   }
 
   //Retorna una ficha en caso de que las posiciones x y esten en su rango
@@ -109,9 +118,10 @@ class Tablero {
       this.espacios[fila][columna].height + 10;
     ficha.move(posX, posY);
     ficha.setDrop();
+    /* console.log(this.imageTeam1, this.imageTeam2); */
     if (this.turnoActivo == true) {
       this.espacios[fila][columna].state = 1;
-      this.fichasTeam1.push(new Ficha(620, 30, 30, this.imageTeam1, this.ctx));
+      this.fichasTeam1.push(new Ficha(620, 40, 30, this.imageTeam1, this.ctx));
     } else {
       this.espacios[fila][columna].state = 2;
       this.fichasTeam2.push(new Ficha(30, 40, 30, this.imageTeam2, this.ctx));
@@ -128,7 +138,6 @@ class Tablero {
           retorned = index;
         }
       });
-      console.log(this.espacios, retorned, posX, posY,);
       if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
         return retorned
       }
