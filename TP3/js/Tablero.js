@@ -179,7 +179,7 @@ class Tablero {
       });
       //En caso de que el juego aumente el tamaño se seatearan cordenadas de las ultimas columnas
       if(this.size == 8){
-        if(posX >= 480 && posX <= 485){
+        if(posX >= 480 && posX <= 500){
           return 6;
         }else if(posX >= 531 && posX <= 550){
           return 7;
