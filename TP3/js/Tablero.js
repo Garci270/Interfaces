@@ -22,7 +22,6 @@ class Tablero {
     this.ctx.lineWidth = 1
     let posX;
     let posY;
-    console.log(this.size)
     //Celdas para fichas
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
@@ -39,7 +38,7 @@ class Tablero {
           posY = espaci.posY + espaci.height ;
         }else if(this.size == 11){
           posX = espaci.posX + espaci.width - 30;
-          posY = espaci.posY + espaci.height - 30 ;
+          posY = espaci.posY + espaci.height - 30;
         }
         this.ctx.fillStyle = "#060A16";
         this.ctx.strokeStyle = "#fff";
