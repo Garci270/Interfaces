@@ -181,7 +181,7 @@ class Tablero {
       if(this.size == 8){
         if(posX >= 480 && posX <= 485){
           return 6;
-        }else if(posX >= 531 && posX <= 536){
+        }else if(posX >= 531 && posX <= 550){
           return 7;
         }else{
           return retorned - 2;
