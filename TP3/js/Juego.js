@@ -12,10 +12,12 @@ class Juego {
     }
 
     cambiarFicha1(image){
+        this.srcimgTeam1 = image;
         this.tablero.cambiarFicha1(image);
     }
 
     cambiarFicha2(image){
+        this.srcimgTeam2 = image;
         this.tablero.cambiarFicha2(image);
     }
 
@@ -24,14 +26,16 @@ class Juego {
         this.tablero.draw();
     }
     checkHit(posX, posY){
-        if (this.gameOver) {
-            return;
-        }
-        let selectedChip = this.tablero.getSelectedChip(posX, posY);
-        if (selectedChip) {
+        if(this.srcimgTeam1 != "" && this.srcimgTeam2 != ""){
+            if (this.gameOver) {
+                return;
+            }
+            let selectedChip = this.tablero.getSelectedChip(posX, posY);
+            if (selectedChip) {
                 this.mode = 'dragging';
                 this.selectedChip = selectedChip;
                 return true;
+            }
         }
         return false;
     }
