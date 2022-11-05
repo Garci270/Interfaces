@@ -21,11 +21,12 @@ class Juego {
         this.srcimgTeam2 = image;
         this.tablero.cambiarFicha2(image);
     }
-
+    //Setea el tablero
     draw(){
         this.ctx.clearRect(0, 0, this.width, this.height);
         this.tablero.draw();
     }
+    //Checkea si el movimiento es valido
     checkHit(posX, posY){
         if(this.srcimgTeam1 != "" && this.srcimgTeam2 != ""){
             if (this.gameOver) {
@@ -40,13 +41,14 @@ class Juego {
         }
         return false;
     }
+    //Maneja el movimiento/arraste de la ficha
     handleDrag(posX, posY){
         if(this.mode === 'dragging' && this.selectedChip){
             this.selectedChip.move(posX, posY);
             this.draw();
         }
     }
-
+    //Setea cuando la ficha deja de ser arrastrada
     stopDragging(){
         if(this.mode === 'dragging'){
             this.checkMove();
