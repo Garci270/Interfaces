@@ -22,7 +22,6 @@ class Tablero {
     this.ctx.lineWidth = 1
     let posX;
     let posY;
-    console.log(this.size)
     //Celdas para fichas
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
@@ -124,13 +123,38 @@ class Tablero {
   //Mueve la ficha a la casilla adecuada y bloquea movimiento.
   //Luego agrega una ficha nueva al tablero
   moveChip(ficha, columna, fila) {
-    //calcula el centro de la celda 
-    let posX =
-      this.espacios[fila][columna].posX +
-      this.espacios[fila][columna].width + 10;
-    let posY =
-      this.espacios[fila][columna].posY +
-      this.espacios[fila][columna].height + 10;
+    let posX;
+    let posY;
+    //calcula el centro de la celda
+    if(this.size == 8){
+      posX =
+        this.espacios[fila][columna].posX +
+        this.espacios[fila][columna].width + 60;
+      posY =
+        this.espacios[fila][columna].posY +
+        this.espacios[fila][columna].height + 60;
+    }else if(this.size == 9){
+      posX =
+        this.espacios[fila][columna].posX +
+        this.espacios[fila][columna].width + 30;
+      posY =
+        this.espacios[fila][columna].posY +
+        this.espacios[fila][columna].height + 30;
+    }if(this.size == 10){
+      posX =
+        this.espacios[fila][columna].posX +
+        this.espacios[fila][columna].width;
+      posY =
+        this.espacios[fila][columna].posY +
+        this.espacios[fila][columna].height;
+    }if(this.size == 11){
+      posX =
+        this.espacios[fila][columna].posX +
+        this.espacios[fila][columna].width - 30;
+      posY =
+        this.espacios[fila][columna].posY +
+        this.espacios[fila][columna].height - 30;
+    }
     ficha.move(posX, posY);
     ficha.setDrop();
     /* console.log(this.imageTeam1, this.imageTeam2); */
