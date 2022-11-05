@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let timer = 300;
+    let first_move = true;
+    let pausado = false;
+    let timerHt = document.querySelector('.timerH4');
     let fichas = document.querySelector('#fichasNone');
     let fichas1 = document.querySelector('.fichas1');
     let fichas2 = document.querySelector('.fichas2');
@@ -16,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.width = 800;
     canvas.height = 650;
     let ctx = canvas.getContext('2d');
-
+    timerHt.innerHTML = timer + " segundos";
     let juego1 = new Juego(ctx, canvas.width, canvas.height,0);
     juego1.draw();
     juego1.selectLinea();
@@ -54,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     size4.addEventListener("click", () => {
+        timer = 300;
+        pausado = false;
+        first_move = true;
         fichas1.classList.remove('noneSize');
         fichas2.classList.remove('noneSize');
         fichas.classList.remove('noneSize');
@@ -74,11 +81,31 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1 = new Juego(ctx, canvas.width, canvas.height, size4.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
-            if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
-                canvas.addEventListener('mousemove', (eMouseMove) => {
-                    juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
-                });
-
+            if(first_move){
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
+                setInterval(function(){
+                    if(!pausado){
+                        timerHt.innerHTML = timer + " segundos";
+                        timer--;
+                        if(timer == -1){
+                            pausado = true;
+                            juego1.empate();
+                        }
+                    }else{
+                        timer = 300;
+                        timerHt.innerHTML = timer;
+                    }
+                },1000);
+            }else{
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
             }
         })
         canvas.addEventListener('mouseup', (eMouseUp) => {
@@ -109,6 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
     size5.addEventListener("click", () => {
+        timer = 300;
+        pausado = false;
+        first_move = true;
         fichas1.classList.remove('noneSize');
         fichas2.classList.remove('noneSize');
         fichas.classList.remove('noneSize');
@@ -130,11 +160,31 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
-            if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
-                canvas.addEventListener('mousemove', (eMouseMove) => {
-                    juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
-                });
-
+            if(first_move){
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
+                setInterval(function(){
+                    if(!pausado){
+                        timerHt.innerHTML = timer;
+                        timer--;
+                        if(timer == -1){
+                            pausado = true;
+                            juego1.empate();
+                        }
+                    }else{
+                        timer = 300;
+                        timerHt.innerHTML = timer + " segundos";
+                    }
+                },1000);
+            }else{
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
             }
         })
         canvas.addEventListener('mouseup', (eMouseUp) => {
@@ -166,6 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     size6.addEventListener("click", () => {
+        timer = 300;
+        pausado = false;
+        first_move = true;
         fichas1.classList.remove('noneSize');
         fichas2.classList.remove('noneSize');
         fichas.classList.remove('noneSize');
@@ -188,11 +241,31 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1 = new Juego(ctx, canvas.width, canvas.height, size6.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
-            if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
-                canvas.addEventListener('mousemove', (eMouseMove) => {
-                    juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
-                });
-
+            if(first_move){
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
+                setInterval(function(){
+                    if(!pausado){
+                        timerHt.innerHTML = timer;
+                        timer--;
+                        if(timer == -1){
+                            pausado = true;
+                            juego1.empate();
+                        }
+                    }else{
+                        timer = 300;
+                        timerHt.innerHTML = timer + " segundos";
+                    }
+                },1000);
+            }else{
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
             }
         })
         canvas.addEventListener('mouseup', (eMouseUp) => {
@@ -224,6 +297,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     size8.addEventListener("click", () => {
+        timer = 300;
+        pausado = false;
+        first_move = true;
         fichas1.classList.remove('noneSize');
         fichas2.classList.remove('noneSize');
         fichas.classList.remove('noneSize');
@@ -246,11 +322,31 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1 = new Juego(ctx, canvas.width, canvas.height, size8.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
-            if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
-                canvas.addEventListener('mousemove', (eMouseMove) => {
-                    juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
-                });
-
+            if(first_move){
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
+                setInterval(function(){
+                    if(!pausado){
+                        timerHt.innerHTML = timer;
+                        timer--;
+                        if(timer == -1){
+                            pausado = true;
+                            juego1.empate();
+                        }
+                    }else{
+                        timer = 300;
+                        timerHt.innerHTML = timer + " segundos";
+                    }
+                },1000);
+            }else{
+                if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
+                    canvas.addEventListener('mousemove', (eMouseMove) => {
+                        juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
+                    });
+                }
             }
         })
         canvas.addEventListener('mouseup', (eMouseUp) => {
@@ -282,6 +378,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     size0.addEventListener("click", ()=>{
+        pausado = true;
+        juego1 = new Juego(ctx, canvas.width, canvas.height,0);
+        juego1.draw();
         size4.classList.remove('noneSize');
         size5.classList.remove('noneSize');
         size6.classList.remove('noneSize');
