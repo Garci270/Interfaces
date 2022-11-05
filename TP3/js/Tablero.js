@@ -155,6 +155,7 @@ class Tablero {
         this.espacios[fila][columna].posY +
         this.espacios[fila][columna].height - 30;
     }
+    console.log(posY);
     ficha.move(posX, posY);
     ficha.setDrop();
     /* console.log(this.imageTeam1, this.imageTeam2); */
@@ -169,7 +170,6 @@ class Tablero {
   //Retorna la columna seleccionada
   getColSelected(posX, posY) {
     let retorned;
-    console.log(posY)
     this.espacios[0].forEach((celda, index) => {
       if(this.size == 8){
         if (posX >= celda.posX && posY <= 130 && posY >= 110) {
@@ -192,9 +192,10 @@ class Tablero {
       if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
         return retorned
       }
-      return retorned-2;
+      return retorned - 2;
   }
   getRowAvailable(index) {
+    console.log(index)
     console.log(this.espacios)
     let variable = this.espacios.length - 1;
     let retorned;
