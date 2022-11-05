@@ -129,34 +129,20 @@ class Tablero {
     let posY;
     //calcula el centro de la celda
     if(this.size == 8){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width + 60;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height + 60;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width + 60;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height + 60;
     }else if(this.size == 9){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width + 30;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height + 30;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width + 30;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height + 30;
     }else if(this.size == 10){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width;
-      posY =
-        this.espacios[fila][columna].posY +
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width;
+      posY = this.espacios[fila][columna].posY +
         this.espacios[fila][columna].height;
     }else if(this.size == 11){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width - 30;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height - 30;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width - 30;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height - 30;
     }
+    console.log(posY);
     ficha.move(posX, posY);
     ficha.setDrop();
     /* console.log(this.imageTeam1, this.imageTeam2); */
@@ -171,31 +157,49 @@ class Tablero {
   //Retorna la columna seleccionada
   getColSelected(posX, posY) {
     let retorned;
+    console.log(posX);
     this.espacios[0].forEach((celda, index) => {
       if(this.size == 8){
-        if (posX >= celda.posX && posY <= 130 && posY >= 110) {
+        if (posX >= celda.posX && posY <= 133 && posY >= 110) {
           retorned = index;
         }
       }else if(this.size == 9){
-        if (posX >= celda.posX && posY <= 100 && posY >= 75) {
+        if (posX >= celda.posX - 20 && posY <= 103 && posY >= 75) {
           retorned = index;
         }
       }else if(this.size == 10){
-        if (posX >= celda.posX && posY <= 70 && posY >= 60) {
+        if (posX >= celda.posX + 20 && posY <= 73 && posY >= 60) {
           retorned = index;
         }
       }else if(this.size == 11){
-        if (posX >= celda.posX && posY <= 40 && posY >= 30) {
+        if (posX >= celda.posX  && posY <= 43 && posY >= 30) {
           retorned = index;
         }
       }
       });
-      if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
-        return retorned
+      //En caso de que el juego aumente el tamaño se seatearan cordenadas de las ultimas columnas
+      if(this.size == 8){
+        if(posX >= 480 && posX <= 485){
+          return 6;
+        }else if(posX >= 531 && posX <= 536){
+          return 7;
+        }else{
+          return retorned - 2;
+        }
+      }else if(this.size == 9){
+        if(posX >= 490 && posX <= 540){
+          return 7;
+        }else if(posX >= 547 && posX <= 557){
+          return 8;
+        }else{
+          return retorned -2;
+        }
+      }else{
+        return retorned;
       }
-       
-      return retorned-2;
   }
+
+  //Se fija si la fila esta disponible y devuelve la posicion de la misma
   getRowAvailable(index) {
     let variable = this.espacios.length - 1;
     let retorned;

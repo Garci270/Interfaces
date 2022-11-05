@@ -11,20 +11,22 @@ class Juego {
         this.srcimgTeam2 = "";
     }
 
+    //Setea la Imagen seleccionada por el equipo 1
     cambiarFicha1(image){
         this.srcimgTeam1 = image;
         this.tablero.cambiarFicha1(image);
     }
-
+    //Setea la Imagen seleccionada por el equipo 1
     cambiarFicha2(image){
         this.srcimgTeam2 = image;
         this.tablero.cambiarFicha2(image);
     }
-
+    //Setea el tablero
     draw(){
         this.ctx.clearRect(0, 0, this.width, this.height);
         this.tablero.draw();
     }
+    //Checkea si el movimiento es valido
     checkHit(posX, posY){
         if(this.srcimgTeam1 != "" && this.srcimgTeam2 != ""){
             if (this.gameOver) {
@@ -39,18 +41,22 @@ class Juego {
         }
         return false;
     }
+    //Maneja el movimiento/arraste de la ficha
     handleDrag(posX, posY){
         if(this.mode === 'dragging' && this.selectedChip){
             this.selectedChip.move(posX, posY);
             this.draw();
         }
     }
+    //Setea cuando la ficha deja de ser arrastrada
     stopDragging(){
         if(this.mode === 'dragging'){
             this.checkMove();
         }
         this.mode = 'standBy';
     }
+
+    //Checkea movimientos de las fichas para saber si un team gano
     checkMove(){
         let checkMove = this.tablero.checkMove(this.selectedChip);
         let checkWin;
@@ -67,6 +73,7 @@ class Juego {
             }
         }
     }
+    //Setea las propiedades del texto al un equipo ganar
     playerWin(player){
         let size = 90;
         let text;
@@ -109,6 +116,7 @@ class Juego {
         this.ctx.fillText(text, this.height / 2, this.width / 3 + offset);        
     }
 
+    //Se setean las propiedades del texto de inicio
     selectLinea(){
         let size = 90;
         let text;
