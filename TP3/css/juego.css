@@ -7,6 +7,10 @@
     color:#fff
 }
 
+.fichas2 h4{
+    margin-left: auto;
+}
+
 .fichas{
     display: flex;
 }
@@ -18,14 +22,35 @@
 .size-linea .sizeGroup{
     margin: auto;
     margin-bottom: 10px;
-    border-radius: 7px;
+}
+
+.size5, .size6, .size8{
+    margin: 5px;
+    cursor: pointer;
+    width: auto;
+    font-size: 15px;
+    height: 25px;
+    background-color: var(--secundario);
     border: none;
+    border-radius: 10px;
     box-shadow: 1px 2px rgba(0,0,0,0.5);
     color: white;
 }
 
+.size5:hover, .size6:hover, .size8:hover{
+    box-shadow: 2px 3px rgba(0,0,0,0.5);
+}
+
+
 .fichas2{
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
+}
+
+.ficha2, .ficha{
+    width: 70px;
+    height: 70px;
 }
 
 .size-linea{

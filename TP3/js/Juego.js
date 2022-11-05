@@ -69,11 +69,11 @@ class Juego {
         if (player == 1) {
             this.ctx.fillStyle = "white";
             this.ctx.strokeStyle = "white";
-            text = "Snow!";
+            text = "Stark!";
         } else {
             this.ctx.fillStyle = "blue";
             this.ctx.strokeStyle = "blue";  
-            text = "del Caminante";
+            text = "Caminante!";
         }
         this.ctx.font = size + "px Times New Roman";
         this.ctx.lineJoin = "round";
