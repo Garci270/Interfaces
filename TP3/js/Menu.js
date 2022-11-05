@@ -87,17 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
                     });
                 }
+                first_move = false;
                 setInterval(function(){
-                    if(!pausado){
+                    if(!pausado && juego1.gameOver == false){
                         timerHt.innerHTML = timer + " segundos";
                         timer--;
                         if(timer == -1){
                             pausado = true;
                             juego1.empate();
+                            clearInterval();
                         }
                     }else{
                         timer = 300;
-                        timerHt.innerHTML = timer;
+                        timerHt.innerHTML = timer + " segundos";
+                        clearInterval();
                     }
                 },1000);
             }else{
@@ -166,17 +169,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
                     });
                 }
+                first_move = false;
                 setInterval(function(){
-                    if(!pausado){
-                        timerHt.innerHTML = timer;
+                    if(!pausado && juego1.gameOver == false){
+                        timerHt.innerHTML = timer + " segundos";
                         timer--;
                         if(timer == -1){
                             pausado = true;
                             juego1.empate();
+                            clearInterval();
                         }
                     }else{
                         timer = 300;
                         timerHt.innerHTML = timer + " segundos";
+                        clearInterval();
                     }
                 },1000);
             }else{
@@ -247,17 +253,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
                     });
                 }
+                first_move = false;
                 setInterval(function(){
-                    if(!pausado){
-                        timerHt.innerHTML = timer;
+                    if(!pausado && juego1.gameOver == false){
+                        timerHt.innerHTML = timer + " segundos";
                         timer--;
                         if(timer == -1){
                             pausado = true;
                             juego1.empate();
+                            clearInterval();
                         }
                     }else{
                         timer = 300;
                         timerHt.innerHTML = timer + " segundos";
+                        clearInterval();
                     }
                 },1000);
             }else{
@@ -328,17 +337,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         juego1.handleDrag(eMouseMove.offsetX, eMouseMove.offsetY);
                     });
                 }
+                first_move = false;
                 setInterval(function(){
-                    if(!pausado){
-                        timerHt.innerHTML = timer;
+                    if(!pausado && juego1.gameOver == false){
+                        timerHt.innerHTML = timer + " segundos";
                         timer--;
                         if(timer == -1){
                             pausado = true;
                             juego1.empate();
+                            clearInterval();
                         }
                     }else{
                         timer = 300;
                         timerHt.innerHTML = timer + " segundos";
+                        clearInterval();
                     }
                 },1000);
             }else{
