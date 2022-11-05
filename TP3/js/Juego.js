@@ -11,11 +11,12 @@ class Juego {
         this.srcimgTeam2 = "";
     }
 
+    //Setea la Imagen seleccionada por el equipo 1
     cambiarFicha1(image){
         this.srcimgTeam1 = image;
         this.tablero.cambiarFicha1(image);
     }
-
+    //Setea la Imagen seleccionada por el equipo 1
     cambiarFicha2(image){
         this.srcimgTeam2 = image;
         this.tablero.cambiarFicha2(image);
@@ -45,12 +46,15 @@ class Juego {
             this.draw();
         }
     }
+
     stopDragging(){
         if(this.mode === 'dragging'){
             this.checkMove();
         }
         this.mode = 'standBy';
     }
+
+    //Checkea movimientos de las fichas para saber si un team gano
     checkMove(){
         let checkMove = this.tablero.checkMove(this.selectedChip);
         let checkWin;
@@ -67,6 +71,7 @@ class Juego {
             }
         }
     }
+    //Setea las propiedades del texto al un equipo ganar
     playerWin(player){
         let size = 90;
         let text;
@@ -92,6 +97,7 @@ class Juego {
         
     }
 
+    //Se setean las propiedades del texto de inicio
     selectLinea(){
         let size = 90;
         let text;
