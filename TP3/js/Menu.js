@@ -55,8 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.width = 800;
         canvas.height = 650;
         let ctx = canvas.getContext('2d');
-
-        let juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
+        juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
             if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.height = 650;
         let ctx = canvas.getContext('2d');
 
-        let juego1 = new Juego(ctx, canvas.width, canvas.height, size6.value);
+        juego1 = new Juego(ctx, canvas.width, canvas.height, size6.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
             if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {
@@ -144,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.height = 650;
         let ctx = canvas.getContext('2d');
 
-        let juego1 = new Juego(ctx, canvas.width, canvas.height, size8.value);
+        juego1 = new Juego(ctx, canvas.width, canvas.height, size8.value);
         juego1.draw();
         canvas.addEventListener('mousedown', (eMouseDown) => {
             if (juego1.checkHit(eMouseDown.offsetX, eMouseDown.offsetY)) {

@@ -61,7 +61,7 @@ class Tablero {
     this.imageTeam1 = new Image();
     this.imageTeam1.src = "";
     this.imageTeam1.onload = () => {
-      this.fichasTeam1.push(new Ficha(620, 40, 30, this.imageTeam1, this.ctx));
+      this.fichasTeam1.push(new Ficha(665, 40, 30, this.imageTeam1, this.ctx));
     };
     this.imageTeam2 = new Image();
     this.imageTeam2.src = "";
@@ -160,7 +160,7 @@ class Tablero {
     /* console.log(this.imageTeam1, this.imageTeam2); */
     if (this.turnoActivo == true) {
       this.espacios[fila][columna].state = 1;
-      this.fichasTeam1.push(new Ficha(620, 40, 30, this.imageTeam1, this.ctx));
+      this.fichasTeam1.push(new Ficha(665, 40, 30, this.imageTeam1, this.ctx));
     } else {
       this.espacios[fila][columna].state = 2;
       this.fichasTeam2.push(new Ficha(30, 40, 30, this.imageTeam2, this.ctx));
@@ -169,7 +169,6 @@ class Tablero {
   //Retorna la columna seleccionada
   getColSelected(posX, posY) {
     let retorned;
-    console.log(posY)
     this.espacios[0].forEach((celda, index) => {
       if(this.size == 8){
         if (posX >= celda.posX && posY <= 130 && posY >= 110) {
@@ -192,10 +191,10 @@ class Tablero {
       if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
         return retorned
       }
+       
       return retorned-2;
   }
   getRowAvailable(index) {
-    console.log(this.espacios)
     let variable = this.espacios.length - 1;
     let retorned;
     let retornedSatus = false;
