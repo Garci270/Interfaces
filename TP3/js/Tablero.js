@@ -140,14 +140,14 @@ class Tablero {
       posY =
         this.espacios[fila][columna].posY +
         this.espacios[fila][columna].height + 30;
-    }if(this.size == 10){
+    }else if(this.size == 10){
       posX =
         this.espacios[fila][columna].posX +
         this.espacios[fila][columna].width;
       posY =
         this.espacios[fila][columna].posY +
         this.espacios[fila][columna].height;
-    }if(this.size == 11){
+    }else if(this.size == 11){
       posX =
         this.espacios[fila][columna].posX +
         this.espacios[fila][columna].width - 30;
@@ -169,20 +169,33 @@ class Tablero {
   //Retorna la columna seleccionada
   getColSelected(posX, posY) {
     let retorned;
+    console.log(posY)
     this.espacios[0].forEach((celda, index) => {
-      if (
-        posX >= celda.posX &&
-        posY <= celda.posY
-        ) {
+      if(this.size == 8){
+        if (posX >= celda.posX && posY <= 130 && posY >= 110) {
           retorned = index;
         }
+      }else if(this.size == 9){
+        if (posX >= celda.posX && posY <= 100 && posY >= 75) {
+          retorned = index;
+        }
+      }else if(this.size == 10){
+        if (posX >= celda.posX && posY <= 70 && posY >= 60) {
+          retorned = index;
+        }
+      }else if(this.size == 11){
+        if (posX >= celda.posX && posY <= 40 && posY >= 30) {
+          retorned = index;
+        }
+      }
       });
       if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
         return retorned
       }
-      return retorned-1;
+      return retorned-2;
   }
   getRowAvailable(index) {
+    console.log(this.espacios)
     let variable = this.espacios.length - 1;
     let retorned;
     let retornedSatus = false;
