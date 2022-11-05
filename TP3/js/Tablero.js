@@ -127,33 +127,18 @@ class Tablero {
     let posY;
     //calcula el centro de la celda
     if(this.size == 8){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width + 60;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height + 60;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width + 60;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height + 60;
     }else if(this.size == 9){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width + 30;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height + 30;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width + 30;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height + 30;
     }else if(this.size == 10){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width;
-      posY =
-        this.espacios[fila][columna].posY +
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width;
+      posY = this.espacios[fila][columna].posY +
         this.espacios[fila][columna].height;
     }else if(this.size == 11){
-      posX =
-        this.espacios[fila][columna].posX +
-        this.espacios[fila][columna].width - 30;
-      posY =
-        this.espacios[fila][columna].posY +
-        this.espacios[fila][columna].height - 30;
+      posX = this.espacios[fila][columna].posX + this.espacios[fila][columna].width - 30;
+      posY = this.espacios[fila][columna].posY + this.espacios[fila][columna].height - 30;
     }
     console.log(posY);
     ficha.move(posX, posY);
@@ -170,21 +155,22 @@ class Tablero {
   //Retorna la columna seleccionada
   getColSelected(posX, posY) {
     let retorned;
+    console.log(posY, parseInt(this.size));
     this.espacios[0].forEach((celda, index) => {
       if(this.size == 8){
         if (posX >= celda.posX && posY <= 130 && posY >= 110) {
           retorned = index;
         }
-      }else if(this.size == 9){
-        if (posX >= celda.posX && posY <= 100 && posY >= 75) {
+      }else if(parseInt(this.size) == 9){
+        if (posX >= celda.posX - 15 && posY <= 100 && posY >= 75) {
           retorned = index;
         }
       }else if(this.size == 10){
-        if (posX >= celda.posX && posY <= 70 && posY >= 60) {
+        if (posX >= celda.posX - 60 && posY <= 70 && posY >= 60) {
           retorned = index;
         }
       }else if(this.size == 11){
-        if (posX >= celda.posX && posY <= 40 && posY >= 30) {
+        if (posX >= celda.posX - 85 && posY <= 40 && posY >= 30) {
           retorned = index;
         }
       }
@@ -192,21 +178,13 @@ class Tablero {
       if(posX >= this.espacios[0][this.espacios.length-1].posX +50){
         return retorned
       }
-<<<<<<< HEAD
-      return retorned - 2;
-  }
-  getRowAvailable(index) {
-    console.log(index)
-    console.log(this.espacios)
-=======
-       
       return retorned-2;
   }
   getRowAvailable(index) {
->>>>>>> 9678aa0986a073c1ccaa049af2dd59c7e13d772d
     let variable = this.espacios.length - 1;
     let retorned;
     let retornedSatus = false;
+    console.log(this.espacios)
     for (let i = variable; i >= 0; i--) {
       if (retornedSatus == false && this.espacios[i][index].state == 0) {
         retornedSatus = true;

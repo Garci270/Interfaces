@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.cambiarFicha2(element.src)
         })
     });
-
-
+    
     size5.addEventListener("click", () => {
         let canvas = document.getElementById('canvasGame');
         let btnReset = document.getElementById('restartGame');
