@@ -3,6 +3,10 @@
     height: 40px;
 }
 
+.noneSize{
+    display: none;
+}
+
 .fichas1 h4, .fichas2 h4{
     color:#fff
 }
@@ -24,7 +28,7 @@
     margin-bottom: 10px;
 }
 
-.size5, .size6, .size8{
+.size0, .size4, .size5, .size6, .size8{
     margin: 5px;
     cursor: pointer;
     width: auto;
