@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let fichas = document.querySelector('#fichasNone');
+    let fichas1 = document.querySelector('.fichas1');
+    let fichas2 = document.querySelector('.fichas2');
     let size0 = document.querySelector('.size0');
     let size4 = document.querySelector('.size4');
     let size5 = document.querySelector('.size5');
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1.stopDragging();
     })
     function newGame() {
+        fichas.classList.remove('noneSize');
+        fichas1.classList.remove('noneSize');
+        fichas2.classList.remove('noneSize');
         juego1 = new Juego(ctx, canvas.width, canvas.height,8);
         juego1.draw();
     }
@@ -48,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     size4.addEventListener("click", () => {
+        fichas1.classList.remove('noneSize');
+        fichas2.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
         size0.classList.remove('noneSize');
         size4.classList.add('noneSize');
         size5.classList.add('noneSize');
@@ -77,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
+            fichas.classList.remove('noneSize');
+            fichas1.classList.remove('noneSize');
+            fichas2.classList.remove('noneSize');
             juego1 = new Juego(ctx, canvas.width, canvas.height, size4.value);
             juego1.draw();
         }
@@ -85,16 +97,22 @@ document.addEventListener('DOMContentLoaded', () => {
             element.addEventListener('click', () => {
                 srcimg2 = element.src;
                 juego1.cambiarFicha1(element.src)
+                fichas2.classList.add('noneSize');
             })
         });
         img2.forEach(element => {
             element.addEventListener('click', () => {
                 srcimg = element.src;
                 juego1.cambiarFicha2(element.src)
+                fichas1.classList.add('noneSize');
             })
         });
     })
     size5.addEventListener("click", () => {
+        fichas1.classList.remove('noneSize');
+        fichas2.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
         size0.classList.remove('noneSize');
         size4.classList.add('noneSize');
         size5.classList.add('noneSize');
@@ -124,6 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
+            fichas.classList.remove('noneSize');
+            fichas1.classList.remove('noneSize');
+            fichas2.classList.remove('noneSize');
             juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
             juego1.draw();
         }
@@ -132,17 +153,23 @@ document.addEventListener('DOMContentLoaded', () => {
             element.addEventListener('click', () => {
                 srcimg2 = element.src;
                 juego1.cambiarFicha1(element.src)
+                fichas2.classList.add('noneSize');
             })
         });
         img2.forEach(element => {
             element.addEventListener('click', () => {
                 srcimg = element.src;
                 juego1.cambiarFicha2(element.src)
+                fichas1.classList.add('noneSize');
             })
         });
     })
 
     size6.addEventListener("click", () => {
+        fichas1.classList.remove('noneSize');
+        fichas2.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
         size0.classList.remove('noneSize');
         size4.classList.add('noneSize');
         size5.classList.add('noneSize');
@@ -173,6 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
+            fichas.classList.remove('noneSize');
+            fichas1.classList.remove('noneSize');
+            fichas2.classList.remove('noneSize');
             juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
             juego1.draw();
         }
@@ -181,17 +211,23 @@ document.addEventListener('DOMContentLoaded', () => {
             element.addEventListener('click', () => {
                 srcimg2 = element.src;
                 juego1.cambiarFicha1(element.src)
+                fichas2.classList.add('noneSize');
             })
         });
         img2.forEach(element => {
             element.addEventListener('click', () => {
                 srcimg = element.src;
                 juego1.cambiarFicha2(element.src)
+                fichas1.classList.add('noneSize');
             })
         });
     })
 
     size8.addEventListener("click", () => {
+        fichas1.classList.remove('noneSize');
+        fichas2.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
+        fichas.classList.remove('noneSize');
         size0.classList.remove('noneSize');
         size4.classList.add('noneSize');
         size5.classList.add('noneSize');
@@ -222,6 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
+            fichas.classList.remove('noneSize');
+            fichas1.classList.remove('noneSize');
+            fichas2.classList.remove('noneSize');
             juego1 = new Juego(ctx, canvas.width, canvas.height, size5.value);
             juego1.draw();
         }
@@ -230,12 +269,14 @@ document.addEventListener('DOMContentLoaded', () => {
             element.addEventListener('click', () => {
                 srcimg2 = element.src;
                 juego1.cambiarFicha1(element.src)
+                fichas2.classList.add('noneSize');
             })
         });
         img2.forEach(element => {
             element.addEventListener('click', () => {
                 srcimg = element.src;
                 juego1.cambiarFicha2(element.src)
+                fichas1.classList.add('noneSize');
             })
         });
     })

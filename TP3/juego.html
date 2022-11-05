@@ -140,19 +140,19 @@
             <div class="title-juego">
                 <h2>4 En linea</h2>
             </div>
-            <div class="fichas">
+            <div class="fichas noneSize" id="fichasNone">
                 <div class="fichas1">
                     <h4>Equipo Stark</h4>
-                    <img src="./assets/ficha2.png" alt="" class="ficha2">
-                    <img src="./assets/fichaVariant2.png" alt="" class="ficha2">
-                    <img src="./assets/fichaVariant1.png" alt="" class="ficha2">
+                    <img src="./assets/ficha2.png" alt="" class="ficha2 point">
+                    <img src="./assets/fichaVariant2.png" alt="" class="ficha2 point">
+                    <img src="./assets/fichaVariant1.png" alt="" class="ficha2 point">
                 </div>
                 <div class="fichas2">
                     <h4>Equipo Noche</h4>
                     <div>
-                        <img src="./assets/ficha1.png" alt="" class="ficha">
-                        <img src="./assets/fichaVariant3.png" alt="" class="ficha">
-                        <img src="./assets/fichaVariant4.png" alt="" class="ficha">
+                        <img src="./assets/ficha1.png" alt="" class="ficha point">
+                        <img src="./assets/fichaVariant3.png" alt="" class="ficha point">
+                        <img src="./assets/fichaVariant4.png" alt="" class="ficha point">
                     </div>
                 </div>
             </div>
@@ -169,8 +169,8 @@
                 <canvas id="canvasGame"></canvas>
             </div>
             <div class="buttons-juego">
-                <button class="jugar" id="restartGame">Reiniciar</button>
-                <button class="comoJugar"><a href="#demo-modal">¿Como Jugar?</a></button>
+                <button class="jugar point" id="restartGame">Reiniciar</button>
+                <button class="comoJugar point"><a href="#demo-modal">¿Como Jugar?</a></button>
             </div>
             <div class="compartir">
                 <h4 id="compartir-juego"><i class="fa fa-share" aria-hidden="true"></i> Compartir</h4>
@@ -349,10 +349,12 @@
     <div id="demo-modal" class="modal">
 		<div class="modal__content">
 			<h1>Instrucciones del Juego</h1>
-			<div>
-                <h4>Posición inicial y objetivo del juego</h4>
+            <div>
+                <h4>Seleccion de Dimension y Fichas</h4>
                 <ul>
-                    <li>El objetivo de este juego consiste en colocar cuatro fichas en una fila contínua vertical, horizontal o diagonalmente.</li>
+                    <li>Primero debes seleccionar la dimension deseada para el juego (4 en linea, 5 en linea, 6 en linea o 7 en linea).
+                        Luego debes seleccionar las fichas de los respectivos equipos.
+                    </li>
                 </ul>
             </div>
             <div>

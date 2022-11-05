@@ -3,8 +3,12 @@
     height: 40px;
 }
 
+.point{
+    cursor: pointer;
+}
+
 .noneSize{
-    display: none;
+    display: none!important;
 }
 
 .fichas1 h4, .fichas2 h4{
