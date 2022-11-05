@@ -3,6 +3,30 @@
     height: 40px;
 }
 
+.timer{
+    display: flex;
+}
+
+.timer h2{
+    color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+.timerH4{
+    padding-left: 10px;
+}
+
+.timer div{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.anchComo:link{
+    text-decoration: none;
+    box-shadow: none;
+}
+
 .point{
     cursor: pointer;
 }
@@ -45,7 +69,11 @@
     color: white;
 }
 
-.size5:hover, .size6:hover, .size8:hover{
+.size0:hover, .size4:hover, .size5:hover, .size6:hover, .size8:hover{
+    box-shadow: 2px 3px rgba(0,0,0,0.5);
+}
+
+.jugar:hover, .comoJugar:hover{
     box-shadow: 2px 3px rgba(0,0,0,0.5);
 }
 

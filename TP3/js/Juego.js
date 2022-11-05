@@ -81,7 +81,7 @@ class Juego {
         }
         this.ctx.font = size + "px Times New Roman";
         this.ctx.lineJoin = "round";
-        this.ctx.lineWidth = size / 10;
+        this.ctx.lineWidth = size / 20;
         this.ctx.textAlign = "center";
         this.ctx.textBaseline = "middle";    
         let offset = size * 0.9;
@@ -89,7 +89,24 @@ class Juego {
         this.ctx.fillText("Gana el equipo", this.height / 2, this.width / 3);
         this.ctx.strokeText(text, this.height / 2, this.width / 3 + offset);
         this.ctx.fillText(text, this.height / 2, this.width / 3 + offset);
-        
+    }
+
+    empate(){
+        let size = 90;
+        let text;
+        this.ctx.fillStyle = "red";
+        this.ctx.strokeStyle = "white";
+        text = "Empatado";
+        this.ctx.font = size + "px Times New Roman";
+        this.ctx.lineJoin = "round";
+        this.ctx.lineWidth = size / 20;
+        this.ctx.textAlign = "center";
+        this.ctx.textBaseline = "middle";    
+        let offset = size * 0.9;
+        this.ctx.strokeText("Han", this.height / 2, this.width / 3);
+        this.ctx.fillText("Han", this.height / 2, this.width / 3);
+        this.ctx.strokeText(text, this.height / 2, this.width / 3 + offset);
+        this.ctx.fillText(text, this.height / 2, this.width / 3 + offset);        
     }
 
     selectLinea(){
