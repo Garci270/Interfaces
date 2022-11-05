@@ -87,4 +87,23 @@ class Juego {
         this.ctx.fillText(text, this.height / 2, this.width / 3 + offset);
         
     }
+
+    selectLinea(){
+        let size = 90;
+        let text;
+        this.ctx.fillStyle = "red";
+        this.ctx.strokeStyle = "white";
+        text = "Dimensiones";
+        this.ctx.font = size + "px Times New Roman";
+        this.ctx.lineJoin = "round";
+        this.ctx.lineWidth = size / 20;
+        this.ctx.textAlign = "center";
+        this.ctx.textBaseline = "middle";    
+        let offset = size * 0.9;
+        this.ctx.strokeText("Selecciona las", this.height / 2, this.width / 3);
+        this.ctx.fillText("Selecciona las", this.height / 2, this.width / 3);
+        this.ctx.strokeText(text, this.height / 2, this.width / 3 + offset);
+        this.ctx.fillText(text, this.height / 2, this.width / 3 + offset);
+        
+    }
 }

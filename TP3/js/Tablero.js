@@ -23,6 +23,7 @@ class Tablero {
     let posX;
     let posY;
     //Celdas para fichas
+    if(this.size != 0){
     this.espacios.forEach((espacio) => {
       espacio.forEach((espaci) => {
         this.ctx.beginPath();
@@ -47,6 +48,7 @@ class Tablero {
         this.ctx.stroke();
       });
     });
+  }
     //Fichas de ambos equipos
     this.fichasTeam1.forEach((ficha) => {
       ficha.draw();
