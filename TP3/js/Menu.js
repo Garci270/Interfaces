@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         juego1.stopDragging();
     })
     function newGame() {
-        fichas.classList.remove('noneSize');
-        fichas1.classList.remove('noneSize');
-        fichas2.classList.remove('noneSize');
+        fichas.classList.add('noneSize');
+        fichas1.classList.add('noneSize');
+        fichas2.classList.add('noneSize');
         pausado = true;
         parar();
         juego1 = new Juego(ctx, canvas.width, canvas.height,0);
@@ -130,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
-            fichas.classList.remove('noneSize');
-            fichas1.classList.remove('noneSize');
-            fichas2.classList.remove('noneSize');
+            fichas.classList.add('noneSize');
+            fichas1.classList.add('noneSize');
+            fichas2.classList.add('noneSize');
             pausado = true;
             parar();
             juego1 = new Juego(ctx, canvas.width, canvas.height,0);
@@ -202,9 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
-            fichas.classList.remove('noneSize');
-            fichas1.classList.remove('noneSize');
-            fichas2.classList.remove('noneSize');
+            fichas.classList.add('noneSize');
+            fichas1.classList.add('noneSize');
+            fichas2.classList.add('noneSize');
             pausado = true;
             parar();
             juego1 = new Juego(ctx, canvas.width, canvas.height, 0);
@@ -276,9 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
-            fichas.classList.remove('noneSize');
-            fichas1.classList.remove('noneSize');
-            fichas2.classList.remove('noneSize');
+            fichas.classList.add('noneSize');
+            fichas1.classList.add('noneSize');
+            fichas2.classList.add('noneSize');
             pausado = true;
             parar();
             juego1 = new Juego(ctx, canvas.width, canvas.height,0);
@@ -350,9 +350,9 @@ document.addEventListener('DOMContentLoaded', () => {
             juego1.stopDragging();
         })
         function newGame() {
-            fichas.classList.remove('noneSize');
-            fichas1.classList.remove('noneSize');
-            fichas2.classList.remove('noneSize');
+            fichas.classList.add('noneSize');
+            fichas1.classList.add('noneSize');
+            fichas2.classList.add('noneSize');
             pausado = true;
             parar();
             juego1 = new Juego(ctx, canvas.width, canvas.height,0);
