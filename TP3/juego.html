@@ -174,7 +174,7 @@
                 <canvas id="canvasGame"></canvas>
             </div>
             <div class="buttons-juego">
-                <button class="jugar point" id="restartGame">Reiniciar</button>
+                <button class="jugar point" id="restartGame" disabled>Reiniciar</button>
                 <button class="comoJugar point"><a class="anchComo" href="#demo-modal">¿Como Jugar?</a></button>
             </div>
             <div class="compartir">
@@ -353,29 +353,44 @@
     </footer>
     <div id="demo-modal" class="modal">
 		<div class="modal__content">
-			<h1>Instrucciones del Juego</h1>
-            <div>
-                <h4>Seleccion de Dimension y Fichas</h4>
-                <ul>
-                    <li>Primero debes seleccionar la dimension deseada para el juego (4 en linea, 5 en linea, 6 en linea o 7 en linea).
-                        Luego debes seleccionar las fichas de los respectivos equipos.
-                    </li>
-                </ul>
+            <div class="como-jugar-info">
+                <h1>Instrucciones del Juego</h1>
+                <div>
+                    <h4>Seleccion de Dimension y Fichas</h4>
+                    <ul>
+                        <li>Primero debes seleccionar la dimension deseada para el juego (4 en linea, 5 en linea, 6 en linea o 7 en linea).
+                            Luego debes seleccionar las fichas de los respectivos equipos.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Cómo colocar las fichas</h4>
+                    <ul>
+                        <li>La regla para colocarlas consiste en que estas siempre "caen hasta abajo". Es decir una ficha puede ser colocada bien en la parte inferior de una columna o bien sobre otra de alguna otra columna.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Cómo finalizar el juego</h4>
+                    <ul>
+                        <li>Uno de los jugadores coloca cuatro o más fichas en una línea contínua vertical, horizontal o diagonalmente. Este jugador gana la partida.</li>
+                        <li>Todas las casillas del tablero están ocupadas y ningún jugador cumple la condición anterior para ganar. En este caso la partida finaliza en empate.</li>
+                    </ul>
+                </div>
+                <a href="#" class="modal__close">&times;</a>
             </div>
-            <div>
-                <h4>Cómo colocar las fichas</h4>
-                <ul>
-                    <li>La regla para colocarlas consiste en que estas siempre "caen hasta abajo". Es decir una ficha puede ser colocada bien en la parte inferior de una columna o bien sobre otra de alguna otra columna.</li>
-                </ul>
+            <div class="como-jugar-img">
+                <h1>Tablero basado en la serie Game of Thrones</h1>
+                <div class="imgs">
+                    <img src="assets/img/como-jugar1.png" alt="" width="200">
+                    <img src="assets/img/tablero.jpg" alt="" width="200">
+                </div>
+                <p>Juego de tronos (en inglés, A Game of Thrones) es una novela de fantasía escrita por el autor estadounidense George R.
+                    R. Martin en 1996 y ganadora del premio Locus a la mejor novela de fantasía en 1997. Se trata de la primera entrega de la serie
+                    de gran popularidad Canción de hielo y fuego. La novela se caracteriza por su estética medieval,1​ la descripción de numerosos personajes bien detallados,
+                    la contraposición de puntos de vista de los múltiples protagonistas, su trama con giros inesperados y un uso sutil y moderado de los aspectos mágicos tan
+                    comunes en otras obras de fantasía heroica.
+                </p>
             </div>
-            <div>
-                <h4>Cómo finalizar el juego</h4>
-                <ul>
-                    <li>Uno de los jugadores coloca cuatro o más fichas en una línea contínua vertical, horizontal o diagonalmente. Este jugador gana la partida.</li>
-                    <li>Todas las casillas del tablero están ocupadas y ningún jugador cumple la condición anterior para ganar. En este caso la partida finaliza en empate.</li>
-                </ul>
-            </div>
-			<a href="#" class="modal__close">&times;</a>
 		</div>
 	</div>
     <script src="https://use.fontawesome.com/dca8629fdb.js"></script>
