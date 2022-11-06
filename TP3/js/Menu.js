@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let btnReset = document.getElementById('restartGame');
     let img = document.querySelectorAll('.ficha');
     let img2 = document.querySelectorAll('.ficha2');
+    let reiniciar = document.getElementById('restartGame');
     let srcimg = "./assets/ficha2.jpg";
     let srcimg2 = "./assets/ficha1.jpg";
     canvas.width = 800;
@@ -75,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let img2 = document.querySelectorAll('.ficha2');
         let srcimg = "./assets/ficha2.jpg";
         let srcimg2 = "./assets/ficha1.jpg";
+        reiniciar.disabled= false
         canvas.width = 800;
         canvas.height = 650;
         let ctx = canvas.getContext('2d');
@@ -151,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         size5.classList.add('noneSize');
         size6.classList.add('noneSize');
         size8.classList.add('noneSize');
+        reiniciar.disabled= false
         let canvas = document.getElementById('canvasGame');
         let btnReset = document.getElementById('restartGame');
         let img = document.querySelectorAll('.ficha');
@@ -234,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         size5.classList.add('noneSize');
         size6.classList.add('noneSize');
         size8.classList.add('noneSize');
+        reiniciar.disabled= false
         let canvas = document.getElementById('canvasGame');
         let btnReset = document.getElementById('restartGame');
         let img = document.querySelectorAll('.ficha');
@@ -318,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         size5.classList.add('noneSize');
         size6.classList.add('noneSize');
         size8.classList.add('noneSize');
+        reiniciar.disabled= false
         let canvas = document.getElementById('canvasGame');
         let btnReset = document.getElementById('restartGame');
         let img = document.querySelectorAll('.ficha');
