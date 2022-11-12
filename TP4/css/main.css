@@ -78,6 +78,26 @@ body{
 }
 
 /* NavBar */
+
+.nav-change{
+    height: 65px!important;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.noneSearch{
+    opacity: 0!important;
+    height: 0px;
+    -webkit-transition: opacity, height 1s ease;
+    -moz-transition: opacity, height 1s ease;
+    -ms-transition: opacity, height 1s ease;
+    -o-transition: opacity, height 1s ease;
+    transition: opacity, height 1s ease;
+}
+
 .contenedor-nav{
     z-index: 999;
     top: 0;
@@ -86,8 +106,14 @@ body{
     flex-direction: row;
     align-items: center;
     max-height: auto;
+    height: 100px;
     width: 100%;
     background-color: var(--primario);
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -ms-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;
 }
 .items-nav{
     display: flex;
@@ -105,6 +131,21 @@ body{
     width: 35px;
     height: 35px;
     border-radius: 10px;
+    -webkit-transition: width 2s ease;
+    -moz-transition:  width 2s ease;
+    -ms-transition:  width 2s ease;
+    -o-transition:  width 2s ease;
+    transition:  width 2s ease;
+}
+
+.logoNavsmall{
+    width: 55px!important;
+    height: 55px!important;
+    -webkit-transition: width 2s ease;
+    -moz-transition:  width 2s ease;
+    -ms-transition:  width 2s ease;
+    -o-transition:  width 2s ease;
+    transition:  width 2s ease;
 }
 
 .icons{
@@ -120,6 +161,12 @@ body{
 
 .container-search{
     margin: auto;
+    opacity: 1;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 .input-icono::placeholder{
@@ -375,8 +422,8 @@ footer{
     }
     .img-logo{
         cursor: pointer;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
     
     .items-nav{
@@ -384,7 +431,7 @@ footer{
         margin: auto;
         padding-left: 25px;
     }
-    .items-nav button{
+    .btnNav{
         cursor: pointer;
         margin-left: 15px;
         width: 120px;
@@ -395,6 +442,19 @@ footer{
         border-radius: 10px;
         box-shadow: 1px 2px rgba(0,0,0,0.5);
         color: white;
+        -webkit-transition: width 1.5s ease;
+        -moz-transition: width 1.5s ease;
+        -ms-transition: width 1.5s ease;
+        -o-transition: width 1.5s ease;
+        transition: width 1.5s ease;
+    }
+    .buttonScroll{
+        width: 110px!important;
+        -webkit-transition: width 1.5s ease;
+        -moz-transition: width 1.5s ease;
+        -ms-transition: width 1.5s ease;
+        -o-transition: width 1.5s ease;
+        transition: width 1.5s ease;
     }
     .items-nav button:hover{
         box-shadow: 2px 3px rgba(0,0,0,0.5);
