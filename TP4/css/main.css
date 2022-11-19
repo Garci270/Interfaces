@@ -322,7 +322,7 @@ input:focus {
 .menu-hamburgesa li{
     color: black !important;
 }
-.active{
+.active-ham{
     display: flex;
 }
 .container-hambur{
@@ -610,7 +610,7 @@ footer{
     
     
     .active-ham{
-        top: 93px;
+        top: 100px;
     }
     .container-hambur{
         background-color: var(--primario);

@@ -6,7 +6,6 @@ let btnsNav = document.querySelectorAll('.btnNav');
 
 window.addEventListener("scroll",e=>{
 	var elementTop = window.scrollY;
-	console.log(elementTop);
 	if(elementTop == 0){
 		nav.classList.remove('nav-change');
 		search.classList.remove('noneSearch');
