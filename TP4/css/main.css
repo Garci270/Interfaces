@@ -164,6 +164,105 @@ input:focus {
     display: none;
 }
 
+.container-hambur .hambur{
+    margin-right: 10px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 40px;
+}
+
+.container-hambur .hambur span{
+    border-radius: 5px;
+    background: black;
+    display: block;
+    height: 60%;
+    margin: 5px auto;
+    height: 2px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hambur.open .top-line{
+    animation-name: top-animation;
+}
+.hambur.open .middle-line{
+    animation-name: middle-animation;
+}
+.hambur.open .bottom-line{
+    animation-name: bottom-animation;
+}
+
+.hambur .top-line{
+    animation-name: top-animation-close;
+}
+.hambur .middle-line{
+    animation-name: middle-animation-close;
+}
+.hambur .bottom-line{
+    animation-name: bottom-animation-close;
+}
+
+@keyframes top-animation {
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+}
+
+@keyframes middle-animation {
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes bottom-animation {
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+}
+
+@keyframes top-animation-close {
+    0%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes middle-animation-close {
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-animation-close {
+    0%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
 /*Menu Hamburgesa*/
 .menu-hamburgesa{
     width: 100%;
@@ -171,6 +270,13 @@ input:focus {
     justify-content: right;
     position: absolute;
     z-index: 100;
+    overflow: hidden;
+}
+.menu-hamburgesa li{
+    color: black !important;
+}
+.active{
+    display: flex;
 }
 .container-hambur{
     background-color: var(--primario);
@@ -207,17 +313,19 @@ input:focus {
     margin: 5px;
 }
 .container-items{
-    display: flex;
-    justify-content: left;
+    display: block;
+    justify-content: center;
 }
 .container-items ul{
     list-style: none;
+    display: block;
     justify-content: left;
     width: 103px;
+    margin-left: -30px;
 }
 .container-items ul li{
     margin-bottom: 20px;
-    margin-left: -30px;
+    width: 400px;
 }
 .mostrar-hambur{
     display: flex;
@@ -431,6 +539,19 @@ footer{
     }
 
     /*Menu Hamburgesa*/
+    .menu-hamburgesa{
+        display: flex;
+        justify-content: right;
+        top: -400px;
+        position: absolute;
+        z-index: 100;
+        transition: all 1000ms linear;
+    }
+    
+    
+    .active-ham{
+        top: 93px;
+    }
     .container-hambur{
         background-color: var(--primario);
         width: 15%;
@@ -451,8 +572,16 @@ footer{
         margin-left: -4px;
     }
     .container-redes ul{
+        margin-left: 400px;
         font-size: 30px;
         height: 80px;
+        transition: all 2000ms linear;
+    }
+    .active-menu{
+        margin-right: 400px;
+    }
+    .active-redes{
+        margin-right: 480px;
     }
     .container-redes ul *{
         margin: 5px;
@@ -460,14 +589,25 @@ footer{
     .container-items{
         margin-top: 10%;
         width: 100%;
+        display: flex;
     }
     .container-items ul{
         width: 100%;
+        margin-left: 480px;
+        justify-content: center;
+        transition: all 2000ms linear;
     }
     .container-items ul li{
         font-size: 20px;
         margin-bottom: 20px;
-        width: 100%;
+    }
+    .container-hambur-user .img-user img{
+        margin-left: 400px;
+        transition: all 2000ms linear;
+    }
+    .container-hambur-user .name-user h4{
+        margin-left: 400px;
+        transition: all 2000ms linear;
     }
 
     /*Carrito*/

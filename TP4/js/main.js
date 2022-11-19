@@ -1,9 +1,24 @@
 //Boton menu de hamburgesa
-document.querySelector("#hambur").addEventListener("click", toggleMenu);
-function toggleMenu() {
+
+const buttonHambur = document.querySelector(".hambur");
+buttonHambur.addEventListener('click', () =>{
+	buttonHambur.classList.toggle('open')
 	document.querySelector(".container-carrito-games").classList.remove("active-cart");
-    document.querySelector(".menu-hamburgesa").classList.toggle("mostrar-hambur");
-}
+    document.querySelector(".menu-hamburgesa").classList.toggle("active-ham");
+	setTimeout(() =>{
+		document.querySelector(".img-user img").classList.add("active-menu");
+	}, 1000)
+	setTimeout(() =>{
+		document.querySelector(".name-user h4").classList.add("active-menu")
+	}, 2000)
+	setTimeout(() =>{
+		document.querySelector(".container-redes ul").classList.add("active-menu");
+	}, 3000)
+	setTimeout(() =>{
+		document.querySelector(".container-items ul").classList.add("active-redes");
+	}, 4500)
+
+})
 
 //Boton carrito
 document.querySelector("#cart").addEventListener("click", toggleMenuCart);
@@ -301,4 +316,5 @@ const progressbar = document.querySelector(".progress");
 const changeProgress = (progress) => {
   progressbar.style.width = `${progress}%`;
 };
+
  
