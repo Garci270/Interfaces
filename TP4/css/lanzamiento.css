@@ -14,6 +14,76 @@
     --acentoA3: #333F77bd;
 }
 
+/* Parallax */
+.container-no-parallax{
+    background-color: #414a74;
+}
+@keyframes scroll{
+    0% {background-position-x:0px ;}
+    100%{background-position-x:-1920px ;}
+}
+
+@keyframes scrollTitle{
+    0% {top:0px ;}
+    100%{top:50px ;}
+}
+
+.hero {
+	height: 800px;
+	overflow: hidden;
+}
+.layer{
+    background-position: bottom center;
+	background-size: auto;
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 600px;
+	position: fixed;
+    z-index: -1;
+
+}
+.layer1{
+    background-image: url('../assets/img/parallax/layer1.png');
+    animation: scroll 40s infinite linear;
+}
+
+.layer2{
+    background-image: url('../assets/img/parallax/layer2.png');
+}
+
+.layer3{
+    background-image: url('../assets/img/parallax/layer3.png');
+	background-repeat: no-repeat;
+
+}
+
+.layer4{
+}
+
+.layerbg{
+    background-image: url('../assets/img/parallax/layerbg.jpg');
+    animation: scroll 40s infinite linear;
+
+}
+
+.h1disolve{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    animation: scroll 20s infinite linear;
+}
+
+.h1disolve h1{
+    color: #5c5244;
+    font-weight: 1000;
+}
+
+.layeroverlay{
+    background-image: url('../assets/img/parallax/layeroverlay.png');
+
+}
+
+
 .linkBtn{
     text-decoration: none;
     color: white;
@@ -180,29 +250,6 @@
     align-items: center;
 }
 
-.par1{
-    margin-bottom: 20px;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat!important;
-    background: url('../assets/fila-1-columna-1.jpg');
-}
-
-.par2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat!important;
-    background: url('../assets/fila-2-columna-1.jpg');
-}
-
 .features{
     display: flex;
     flex-direction: column;
@@ -352,6 +399,12 @@ footer{
 }
 
 
+@media only screen and (min-width:1900px){
+    .layer{
+        height: 900px;
+    
+    }
+}
 
 @media only screen and (min-width:1024px){
     .menu{
