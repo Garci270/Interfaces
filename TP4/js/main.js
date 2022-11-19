@@ -1,3 +1,29 @@
+//NavBar Scroll
+let nav = document.querySelector('#nav');
+let search = document.querySelector('#searchNav');
+let btnsNav = document.querySelectorAll('.btnNav');
+
+
+window.addEventListener("scroll",e=>{
+	var elementTop = window.scrollY;
+	console.log(elementTop);
+	if(elementTop == 0){
+		nav.classList.remove('nav-change');
+		search.classList.remove('noneSearch');
+		btnsNav.forEach(e => {
+			e.classList.remove('buttonScroll');
+		});
+		logoNav.classList.remove('logoNavsmall');
+	}else{
+		nav.classList.add('nav-change');
+		search.classList.add('noneSearch');
+		btnsNav.forEach(e => {
+			e.classList.add('buttonScroll');
+		});
+		logoNav.classList.add('logoNavsmall');
+		
+	}
+})
 //Boton menu de hamburgesa
 
 const buttonHambur = document.querySelector(".hambur");
@@ -318,3 +344,4 @@ const changeProgress = (progress) => {
 };
 
  
+
