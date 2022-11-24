@@ -1,22 +1,35 @@
-const buttonsGalery = document.querySelectorAll("[data-carousel-button]");
 
-buttonsGalery.forEach(button =>{
-	button.addEventListener("click", () =>{
-		const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-		const slides = button.closest("[data-carousel").querySelector("[data-slides]")
-		
-		const activeSlide = slides.querySelector("[data-active]")
-		let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-		if(newIndex < 0) {
-			newIndex = slides.children.length -1;
-		}
-		if(newIndex >= slides.children.length){
-			newIndex = 0;
-		}
+const itemsGameplay = document.querySelector('.list-galery');
+const galeryNext = document.querySelector('.carousel-next');
+const galeryPrev = document.querySelector('.carousel-prev');
 
-		slides.children[newIndex].dataset.active = true;
-		delete activeSlide.dataset.active;
+
+
+console.log(itemsGameplay.clientWidth);
+
+galeryNext.addEventListener('click', ()=>{
+	itemsGameplay.scrollLeft += 500;
+	let lis = document.querySelectorAll(".slide-galery")
+	lis.forEach(x =>{
+		x.classList.remove('moveRightLi')
 	})
+	setTimeout(() =>{
+		lis.forEach(x =>{
+			x.classList.add('moveRightLi');
+		})
+	}, 100)
+})
+galeryPrev.addEventListener('click', ()=>{
+	itemsGameplay.scrollLeft -= 500;
+	let lis = document.querySelectorAll(".slide-galery")
+	lis.forEach(x =>{
+		x.classList.remove('moveLeftLi')
+	})
+	setTimeout(() =>{
+		lis.forEach(x =>{
+			x.classList.add('moveLeftLi');
+		})
+	}, 100)
 })
 
 //NavBar Scroll

@@ -57,9 +57,6 @@
 
 }
 
-.layer4{
-}
-
 .layerbg{
     background-image: url('../assets/img/parallax/layerbg.jpg');
     animation: scroll 40s infinite linear;
@@ -516,64 +513,86 @@ footer{
 		color: #483177;
 	}
 
-    .galery-section{
+    
+    .slide-galery img{
+        width: 400px;
+        object-fit: cover;
+    }
+    .galery-carousel{
         display: flex;
         justify-content: center;
     }
-
-    .galery-carousel{
-        width: 600px;
-        height: 400px;
-        position: relative;
-    }
-    .galery-carousel > ul{
-        margin: 0;
-        padding: 0;
+    .galery-carousel ul{
         list-style: none;
+        display: flex;
+        overflow: hidden;
+        width: 70%;
+        margin-block-start: 0 !important;
+        padding-inline-start: 0 !important;
+        column-gap: 10px;
+        scroll-behavior: smooth;
     }
-    .slide-galery{
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: 300ms opacity ease-in-out;
-        transition-delay: 300ms;
+    .galery-carousel ul::-webkit-scrollbar {
+        display: none;
     }
-    .slide-galery > img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-    .slide-galery[data-active]{
-        opacity: 1;
-        transition-delay: 0;
-    }
-    .carousel-button{
+    .galery-carousel button{
         position: absolute;
         background: none;
         border: none;
-        font-size: 4rem;
-        top: 50%;
+        font-size: 3rem;
         z-index: 1;
         transform: translateY(-50%);
         cursor: pointer;
-        border-radius: .25rem;
+        border-radius: .35rem;
         padding: 0 .5rem;
         background-color: rgba(0, 0, 0, .1);
+        margin-top: 7%;
     }
 
-    .carousel-button:hover,
-    .carousel-button:focus{
+    .galery-carousel button:hover,
+    .galery-carousel button:focus{
         color: white;
         background-color: rgba(0, 0, 0, .2);
     }
-    .carousel-button:focus{
+    .galery-carousel button:focus{
         outline: 1px solid black;
     }
-    .carousel-button.next{
-        right: 1rem;
+    .carousel-next{
+        margin-left: 75%;
     }
+    .carousel-prev{
+        margin-right: 75%;
+    }
+
+    .moveRightLi{
+        animation: moveLeftLi 1.5s;
+    }
+    .moveLeftLi{
+        animation: moveRightLi 1.5s;
+    }
+    
+      @keyframes moveRightLi {
+        0%{
+          transform: translateX(0);
+        }
+        50%{
+            transform: translateX(100px);
+        }
+        100%{
+          transform: translateX(0);
+        }
+      }
+      @keyframes moveLeftLi {
+        0%{
+          transform: translateX(0);
+        }
+        50%{
+            transform: translateX(-100px);
+        }
+        100%{
+          transform: translateX(0);
+        }
+      }
 }
 
 
