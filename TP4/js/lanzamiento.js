@@ -92,9 +92,7 @@ let card1scroll = document.querySelector("#card-1-scroll");
 let card2scroll = document.querySelector("#card-2-scroll");
 let card3scroll = document.querySelector("#card-3-scroll");
 window.addEventListener('scroll', e =>{
-    console.log(window.scrollY);
     if(window.scrollY >= 1935 && window.scrollY < 2440){
-        console.log("object");
         card1scroll.classList.add('opacity-set');
         card2scroll.classList.remove('opacity-set');
         card3scroll.classList.add('opacity-set');
@@ -131,6 +129,25 @@ setInterval(()=>{
         sprite.classList.remove('step-'+contador);
         contador++;
         sprite.classList.add('step-'+contador);
-        console.log(contador);
     }
 },300)
+
+let slide1 = document.querySelector('#slide1');
+let slide2 = document.querySelector('#slide2');
+let slide3 = document.querySelector('#slide3');
+let card1scrollFade = document.querySelector("#card-1-scroll");
+let cardReservation = document.querySelector('#card-launch-fade');
+window.addEventListener('scroll', e =>{
+    console.log(window.scrollY);
+    if(window.scrollY >= 2770){
+        slide1.classList.remove('card-1-fade');
+        slide2.classList.remove('card-1-fade');
+        slide3.classList.remove('card-1-fade');
+    }else if(window.scrollY >= 320){
+        cardReservation.classList.remove('card-1-fade');
+    }
+    if(window.scrollY >= 800){
+        console.log("hola");
+        card1scrollFade.classList.remove('card-1-fade');
+    }
+})
