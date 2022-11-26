@@ -344,6 +344,67 @@
     font-size: 14px;
 }
 
+.step-1{
+    background:url(../assets/img/sprite/20-0.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-2{
+    background:url(../assets/img/sprite/20-1.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-3{
+    background:url(../assets/img/sprite/20-2.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-4{
+    background:url(../assets/img/sprite/20-3.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-5{
+    background:url(../assets/img/sprite/20-4.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-6{
+    background:url(../assets/img/sprite/20-5.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-7{
+    background:url(../assets/img/sprite/20-6.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-8{
+    background:url(../assets/img/sprite/20-7.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-9{
+    background:url(../assets/img/sprite/20-8.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+.step-10{
+    background:url(../assets/img/sprite/20-9.png) no-repeat;
+    width: 73px;
+    height: 110px;
+}
+
+
 .card-header, .card-body, .card-footer{
     display: flex;
     flex-direction: column;

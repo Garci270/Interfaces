@@ -118,3 +118,19 @@ window.addEventListener('scroll', e =>{
         img3scroll.classList.add('opacity-set');
     }
 })
+
+//sprite
+let contador = 1;
+setInterval(()=>{
+    const sprite = document.querySelector('#sprite');
+    if(contador == 10){
+        sprite.classList.remove('step-'+contador);
+        sprite.classList.add('step-'+1);
+        contador = 1;
+    }else{
+        sprite.classList.remove('step-'+contador);
+        contador++;
+        sprite.classList.add('step-'+contador);
+        console.log(contador);
+    }
+},300)
