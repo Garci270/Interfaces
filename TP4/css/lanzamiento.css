@@ -91,7 +91,7 @@
   }
   
   .card-character {
-    display: none;
+    display: flex;
     flex-direction: column;
     height: 500px;
     width: 220px;
@@ -583,9 +583,30 @@ footer{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+    .main-container-char{
+        margin-top: 10%;
+    }
     .container-card-character {
         display: flex;
       }
+      .titles-hero{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+      }
+      .zone-chars{
+        display: flex;
+        transition: opacity,margin-top 1s;
+      }
+    .zone-chars2{
+        display: flex;
+        transition: opacity,margin-top 1s;
+    }
+    .zone-active{
+        opacity: 0;
+        margin-top: 300px;
+    }
     .active{
 		display: flex;
 	}
@@ -609,7 +630,9 @@ footer{
 		color: #483177;
 	}
 
-    
+    .galery-section{
+        margin-top: 15%;
+    }
     .slide-galery img{
         width: 400px;
         object-fit: cover;
