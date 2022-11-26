@@ -138,7 +138,6 @@ let slide3 = document.querySelector('#slide3');
 let card1scrollFade = document.querySelector("#card-1-scroll");
 let cardReservation = document.querySelector('#card-launch-fade');
 window.addEventListener('scroll', e =>{
-    console.log(window.scrollY);
     if(window.scrollY >= 2770){
         slide1.classList.remove('card-1-fade');
         slide2.classList.remove('card-1-fade');
@@ -147,7 +146,6 @@ window.addEventListener('scroll', e =>{
         cardReservation.classList.remove('card-1-fade');
     }
     if(window.scrollY >= 800){
-        console.log("hola");
         card1scrollFade.classList.remove('card-1-fade');
     }
 })
