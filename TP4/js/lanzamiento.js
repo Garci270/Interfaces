@@ -100,3 +100,21 @@ setInterval(()=>{
         sprite.classList.add('step-'+contador);
     }
 },300)
+
+let slide1 = document.querySelector('#slide1');
+let slide2 = document.querySelector('#slide2');
+let slide3 = document.querySelector('#slide3');
+let card1scrollFade = document.querySelector("#card-1-scroll");
+let cardReservation = document.querySelector('#card-launch-fade');
+window.addEventListener('scroll', e =>{
+    if(window.scrollY >= 2770){
+        slide1.classList.remove('card-1-fade');
+        slide2.classList.remove('card-1-fade');
+        slide3.classList.remove('card-1-fade');
+    }else if(window.scrollY >= 320){
+        cardReservation.classList.remove('card-1-fade');
+    }
+    if(window.scrollY >= 800){
+        card1scrollFade.classList.remove('card-1-fade');
+    }
+})

@@ -288,6 +288,7 @@
 }
 
 .section-reservation{
+    transition: margin-left 1s;
     width: 200px;
     height: 200px;
 }
@@ -336,6 +337,8 @@
     margin: auto;
     width: 350px;
     height: 350px;
+    margin-left: 0px;
+    transition: margin-left 1s;
 }
 
 .history-text{
@@ -404,6 +407,10 @@
     height: 110px;
 }
 
+.card-1-fade{
+    margin-left: 10000px!important;
+}
+
 
 .card-header, .card-body, .card-footer{
     display: flex;
@@ -449,6 +456,7 @@ ul.slider .section-features{
     height: 250px;
     top: -20px;
     left: -134px;
+    transition: margin-left 1s;
 }
 
 ul.slider .section-features:first-child{
