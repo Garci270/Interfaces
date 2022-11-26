@@ -1,36 +1,5 @@
 
-const itemsGameplay = document.querySelector('.list-galery');
-const galeryNext = document.querySelector('.carousel-next');
-const galeryPrev = document.querySelector('.carousel-prev');
 
-
-
-console.log(itemsGameplay.clientWidth);
-
-galeryNext.addEventListener('click', ()=>{
-	itemsGameplay.scrollLeft += 500;
-	let lis = document.querySelectorAll(".slide-galery")
-	lis.forEach(x =>{
-		x.classList.remove('moveRightLi')
-	})
-	setTimeout(() =>{
-		lis.forEach(x =>{
-			x.classList.add('moveRightLi');
-		})
-	}, 100)
-})
-galeryPrev.addEventListener('click', ()=>{
-	itemsGameplay.scrollLeft -= 500;
-	let lis = document.querySelectorAll(".slide-galery")
-	lis.forEach(x =>{
-		x.classList.remove('moveLeftLi')
-	})
-	setTimeout(() =>{
-		lis.forEach(x =>{
-			x.classList.add('moveLeftLi');
-		})
-	}, 100)
-})
 
 //NavBar Scroll
 let nav = document.querySelector('#nav');

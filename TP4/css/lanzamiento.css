@@ -23,11 +23,6 @@
     100%{background-position-x:-1920px ;}
 }
 
-@keyframes scrollTitle{
-    0% {top:0px ;}
-    100%{top:50px ;}
-}
-
 .hero {
 	height: 800px;
 	overflow: hidden;
@@ -297,7 +292,47 @@
     height: 200px;
 }
 
+.history{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.img-1-history, .img-2-history, .img-3-history{
+    margin-top: 25px;
+    width: 400px!important;
+    height: 400px!important;
+}
+
+.opacity-set{
+    visibility: hidden!important;
+    opacity: 0!important;
+}
+
+.img-1-history, .img-2-history, .img-3-history{
+    transition: opacity 2s;
+}
+
+.img-1-history, .img-2-history, .img-3-history{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 130px;
+    opacity: 1;
+    visibility: visible;
+}
+.cards-scroll, .fixed-gallery{
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-gallery{
+   
+    margin-right: 60px;
+}
+
 .section-history{
+    margin-top: 25px!important;
     margin: auto;
     width: 350px;
     height: 350px;

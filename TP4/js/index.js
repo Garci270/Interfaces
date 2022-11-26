@@ -22,3 +22,4 @@ function goToGame(id){
 	location.href = "#";
 	location.href = "#"+id;
 }
+
