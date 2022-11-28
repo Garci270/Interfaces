@@ -2,13 +2,12 @@ let containerCharacters = document.querySelectorAll('.container-card-character')
 let characteres1 = document.querySelector('.zone-chars')
 let characteres2 = document.querySelector('.zone-chars2')
 
-console.log(characteres2);
 
 window.addEventListener('scroll', () =>{
-    if(window.scrollY >= 3400){
+    if(window.scrollY >= 3500){
         characteres1.classList.remove('zone-active');
     }
-    if(window.scrollY >= 3912){
+    if(window.scrollY >= 4400){
         characteres2.classList.remove('zone-active');
     }
 })
@@ -23,7 +22,6 @@ const galeryPrev = document.querySelector('.carousel-prev');
 
 
 
-console.log(itemsGameplay.clientWidth);
 
 galeryNext.addEventListener('click', ()=>{
 	itemsGameplay.scrollLeft += 500;
